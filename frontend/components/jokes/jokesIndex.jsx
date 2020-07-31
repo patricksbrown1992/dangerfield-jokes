@@ -60,7 +60,7 @@ class JokesForm extends React.Component {
 
         ]
         jokes.unshift(...other_jokes)
-        debugger
+       
 
         let i = 0
         while (i < jokes.length){
@@ -76,7 +76,7 @@ class JokesForm extends React.Component {
             }
             i++;
         }
-        debugger
+   
         // let all_jokes = this.state.jokes.concat(arr)
         this.setState({jokes: arr})
     }
@@ -107,7 +107,7 @@ class JokesForm extends React.Component {
         
   
         let jokes = this.state.jokes.map(joke => {
-            debugger
+        
             return <Card setup={joke.setup} joke_id={joke.joke_id} punchline={joke.punchline} smile={joke.smile} frown={joke.frown}/>
         });
         let rodneys_jokes = jokes.slice(0,6);

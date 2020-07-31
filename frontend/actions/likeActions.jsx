@@ -9,7 +9,7 @@ export const CLEAR_LIKES = 'CLEAR_LIKES';
 
 
 const receiveLike = like => {
-    debugger
+
     return ({
         type: RECEIVE_LIKE,
         like
@@ -48,13 +48,13 @@ export const getLike = (id) => dispatch => (
 );
 
 export const createLike = (like) => dispatch => {
-    debugger
+
     return APIUtil.createLike(like).then(like => dispatch(receiveLike(like)));
 
 };
 
 export const updateLike = (like) => dispatch => {
-    debugger
+   
     return APIUtil.updateLike(like).then(like => (dispatch(receiveLike(like))))
 };
 

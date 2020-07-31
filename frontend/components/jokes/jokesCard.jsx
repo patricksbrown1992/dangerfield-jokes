@@ -14,7 +14,7 @@ class JokesCard extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+       
         this.setState({id: this.props.joke_id, setup: this.props.setup, punchline: this.props.punchline, smile: this.props.smile, frown: this.props.frown})
     }
 
