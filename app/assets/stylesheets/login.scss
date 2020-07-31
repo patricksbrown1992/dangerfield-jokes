@@ -1,0 +1,151 @@
+.outerdiv {
+    display:flex;
+    justify-content: center;
+
+    background-color: mintcream;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-size: 20% 20%;
+}
+
+
+
+.log-in-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 6%;
+    width: 515px;
+    background-color: white;
+    height: 630px;
+    z-index: 2;
+}
+
+
+
+
+.log-in-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 26%;
+    margin-bottom: 10%;
+    padding-top: 8%;
+}
+.log-in-top img {
+    margin-left: 26.5%;
+    
+}
+.log-in-top h1 {
+    margin-left: 6%;
+
+
+}
+.log-in-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    height: 29%;
+}
+.log-in-bottom {
+    padding-top: 6%;
+    margin-bottom: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    height: 18.5%;
+
+}
+
+
+.log-in-danger {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.log-in-form h3 {
+    
+    margin-bottom: 10%;
+}
+
+.log-in-form img {
+    width: 100px;
+    height: 100px;
+
+}
+
+ .log-in-form li {
+    list-style: none;
+    color: red;
+    font-family: sans-serif;
+ }
+
+  .log-in-form .enter-username button:hover {
+    color: honeydew;
+    cursor: pointer;
+ 
+    outline: none;
+  }
+
+.enter-username button {
+
+    width: 350px;
+    line-height: 475%;
+    border-radius: 12px;
+    color: honeydew;
+    outline: none;
+}
+
+  .log-in-email-input {
+  
+    margin-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    outline: none;
+    width: 315px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+
+  }
+
+
+ .redirect-to-login-signup a {
+  
+     text-decoration: none;
+     margin-bottom: -200px;
+ }
+ .redirect-to-login-signup a:hover {
+ 
+    cursor: pointer;
+ }
+.log-in-password-hide {
+    
+    height: 0;
+    opacity: 0;
+    transition: height 1s ease;
+}
+
+.log-in-password-show {
+    transition: height 1s, opacity 1s;
+    opacity: 100;
+
+    margin-bottom: 6px;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    width: 315px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    font-size: 16px;
+}
