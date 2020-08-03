@@ -21,22 +21,24 @@ class LogInForm extends React.Component {
     handleSubmit(e) {
    
         e.preventDefault();
-        
+        this.props.clearErrors();
         this.props.login(this.state);
+        this.setState({ email: '', password: '' });
+        
        
         
       
     }
     render(){
-        let passwordClass;
-        let buttonText;
-    
-        // let changeHeight;
-     
-        
-            // changeHeight= 'log-in-form-2'
-            passwordClass = 'log-in-password-show';
-            buttonText = 'Sign in';
+        let errors;
+        if (this.props.errors.length > 0) {
+
+            errors = this.props.errors.map((error, idx) => {
+                return <li key={idx}>{error}</li>
+            });
+        } 
+            
+            
         
         
        
@@ -54,18 +56,18 @@ class LogInForm extends React.Component {
                         
 
                         <input className="log-in-email-input" placeholder='Email address' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
-                        <input className={passwordClass} type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
-                        
+                        <input className='log-in-password' type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
+                        {errors}
                         <form onSubmit={this.handleSubmit}>
-                            <div className='enter-username'>
+                            <div className='login-button'>
 
-                                <button type='submit'>{buttonText}</button>
+                                <button type='submit'>Sign in</button>
                             </div>
                         </form>
                     </div>
                     <div className ="log-in-bottom">
 
-                        <h3>Remember me for 30 days</h3>
+                        
                         <h3>Don't have an account?</h3>
                         <div className='redirect-to-login-signup'>
                             <Link to='/signup'>Create account</Link>
