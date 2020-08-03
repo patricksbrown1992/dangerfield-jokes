@@ -15,6 +15,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem "rails_12factor"
 gem 'validates_email_format_of'
+gem 'autoprefixer-rails'
+
 
 
 # See https://github.com/rails/execjs#readme for more supported runtimes

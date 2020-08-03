@@ -95,9 +95,10 @@ class JokesCard extends React.Component {
                 </div>
 
                 <div className = 'like-buttons'>
+                    <img onClick={this.changeFrown} className = {frown} src={window.frown} alt="dislike button as a frown"/>
                     <img onClick={this.changeSmile} className = {smile} src={window.smile} alt="like button as a smiley"/>
                   
-                    <img onClick={this.changeFrown} className = {frown} src={window.frown} alt="dislike button as a frown"/>
+                    
                 </div>
                 
             </div>

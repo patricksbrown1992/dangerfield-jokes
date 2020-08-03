@@ -1,9 +1,14 @@
+
 .outerdiv {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     background-color: #64c6c6;
-    z-index: 1;
+    /* z-index: 1; */
     height: 100%;
     width: 100%;
 
@@ -12,29 +17,47 @@
 
 
 .log-in-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 515px;
     background-color: white;
-    margin-top: 25px;
+    margin-top: 15px;
     height: 550px;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 
 
 
 .log-in-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 5px;
     width: 100%;
-    // margin-bottom: 10%;
-    // padding-top: 8%;
+    
+  
 }
 
 .log-in-top h1 {
@@ -42,22 +65,38 @@
 }
 
 .log-in-middle {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 75%;
     height: 200px;
  
 }
 
 .log-in-bottom {
-    padding-top: 6%;
-    margin-bottom: 38%;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     align-items: center;
     height: 18.5%;
 
@@ -103,7 +142,7 @@
     outline: none;
 }
 
-  .log-in-email-input {
+  /* .log-in-email-input {
   
     margin-bottom: 1%;
     padding-left: 5%;
@@ -111,11 +150,14 @@
     outline: none;
     width: 315px;
     height: 40px;
+   
     border-radius: 10px;
     border: 1px solid #e6e6e6;
-    font-size: 16px;
+    font-size: 16px; */
 
-  }
+    
+
+  /* } */
 
 
  .redirect-to-login-signup a {
@@ -129,17 +171,21 @@
  }
 
 
-.log-in-password {
+.log-in-input {
   
 
     margin-bottom: 6px;
     border-radius: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    
+    padding: 15px 20px;
+  
     outline: none;
     width: 315px;
-    height: 40px;
-    border-radius: 10px;
+    height: auto;
+    display: -webkit-box;
+  
+    display: -ms-flexbox;
     border: 1px solid #e6e6e6;
     font-size: 16px;
 }
+

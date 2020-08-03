@@ -44,8 +44,9 @@ class splashForm extends React.Component {
                 </div>
                 <div className = 'splash-body'>
                     <div className = 'splash-body-left'>
-                        <h1>Welcome to the Ferly crew</h1>
+                        <h1>Welcome Ferly crew</h1>
                         <h3>I'm really excited about the opportunity</h3>
+                        <h3>I had a lot of fun making this</h3>
                         <button className = 'demo-button' onClick={this.demo}>Demo</button>
                     </div>
                     <div className='splash-body-right'>

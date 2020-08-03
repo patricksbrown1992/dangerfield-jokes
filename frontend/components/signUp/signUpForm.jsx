@@ -9,6 +9,10 @@ class SignUpForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
      
+    componentWillUnmount(){
+        this.props.clearErrors();
+    }
+
     handleChange(field) {
         
         return (e) => {
@@ -51,13 +55,13 @@ class SignUpForm extends React.Component {
                             <div className ="log-in-middle">
                         
 
-                                <input className="log-in-email-input" placeholder='Email address' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
-                                <input className='log-in-password' type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
+                                <input className="log-in-input" placeholder='Email address' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
+                                <input className='log-in-input' type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
                                 {errors}
                                 <form onSubmit={this.handleSubmit}>
                                     <div className='login-button'>
 
-                                        <button type='submit'>Sign in</button>
+                                        <button type='submit'>Sign Up</button>
                                     </div>
                                 </form>
                             </div>

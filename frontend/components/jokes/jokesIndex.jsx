@@ -14,6 +14,10 @@ class JokesForm extends React.Component {
         this.receiveJokes = this.receiveJokes.bind(this);
     };
 
+    componentWillUnmount(){
+        this.props.clearLikes();
+    }
+
     receiveJokes(jokes, likes){
         let arr = []
         let other_jokes = [
@@ -49,11 +53,7 @@ class JokesForm extends React.Component {
       
                 id: 5004
             }, 
-            {
-                setup: 'I was making love to this girl and she started crying. I said, “Are you going to hate yourself in the morning?”',
-                punchline: 'She said, “No, I hate myself now.”',
-                id: 5005
-            }, 
+            
 
 
 
@@ -109,8 +109,8 @@ class JokesForm extends React.Component {
         
             return <Card key = {joke.id} setup={joke.setup} joke_id={joke.joke_id} punchline={joke.punchline} smile={joke.smile} frown={joke.frown}/>
         });
-        let rodneys_jokes = jokes.slice(0,6);
-        let other_jokes = jokes.slice(6);
+        let rodneys_jokes = jokes.slice(0,5);
+        let other_jokes = jokes.slice(5);
        
        
         return (

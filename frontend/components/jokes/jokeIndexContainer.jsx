@@ -1,6 +1,6 @@
 import {logout} from '../../actions/sessionActions';
 import JokesIndex from './jokesIndex';
-import {getLikes} from '../../actions/likeActions';
+import {getLikes, clearLikes} from '../../actions/likeActions';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
 
@@ -14,7 +14,8 @@ const msp = state => ({
 const mdp = dispatch => ({
     
     logout: () => dispatch(logout()),
-    getLikes: user => dispatch(getLikes(user))
+    getLikes: user => dispatch(getLikes(user)),
+    clearLikes: () => dispatch(clearLikes())
 
 
 });

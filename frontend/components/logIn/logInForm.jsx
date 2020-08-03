@@ -18,6 +18,10 @@ class LogInForm extends React.Component {
         };
     }
 
+    componentWillUnmount(){
+        this.props.clearErrors();
+    }
+
     handleSubmit(e) {
    
         e.preventDefault();
@@ -55,8 +59,8 @@ class LogInForm extends React.Component {
                     <div className ="log-in-middle">
                         
 
-                        <input className="log-in-email-input" placeholder='Email address' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
-                        <input className='log-in-password' type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
+                        <input className="log-in-input" placeholder='Email address' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
+                        <input className='log-in-input' type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
                         {errors}
                         <form onSubmit={this.handleSubmit}>
                             <div className='login-button'>
