@@ -18,61 +18,51 @@ class SignUpForm extends React.Component {
 
     handleSubmit(e){
         e.preventDefault();
-        if (e.currentTarget.className === 'sign-up-continue-form'){
-
-            this.props.signup(this.state);
-            this.setState({ email: '', password: '' });
-         
+        this.props.clearErrors();
+        this.props.signup(this.state);
+        this.setState({ email: '', password: '' });
+        
             
-        } else {
-
-            const email = 'admin@admin.com';
-            const password = '123456';
-            const person = { email, password };
-            this.props.login(person);
-            this.setState({ email: '', password: '' });
-     
-        }
+       
         
     }
  
     render(){
     
-       
+       let errors;
+       if (this.props.errors.length > 0) {
+
+            errors = this.props.errors.map((error, idx) => {
+                return <li key={idx}>{error}</li>
+            });
+        } 
       
         return (
             
                 <div className = 'outerdiv'>
-                    <div className='sign-up-form'>
+                    <div className='log-in-form'>
                     
-                            <div className ="sign-up-top">
+                            <div className ="log-in-top">
                                 <h1 className='log-in-danger'>Dangerfield-ster</h1>
                                 <h3>I don't get no respect</h3>
 
                             </div>
                             
-                            <div className="sign-up-middle">
-                                 <form onSubmit={this.handleSubmit}>
-                                    <div className="demo-button">
-                                        <button type='submit'>Demo for Free</button>
-                                    </div>
-                                 </form>
-                                <br/>
-                                <div className="sign-up-inputs">
+                            <div className ="log-in-middle">
+                        
 
-                                <input className="sign-up-email" type="text" value={this.state.email} placeholder='Email' onChange={this.handleChange('email')} />
-                                <input className = "sign-up-password" type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')}/>
-                                </div>
+                                <input className="log-in-email-input" placeholder='Email address' type="text" value={this.state.email} onChange={this.handleChange('email')}/>
+                                <input className='log-in-password' type="password" placeholder='Password' value={this.state.password} onChange={this.handleChange('password')} />
+                                {errors}
+                                <form onSubmit={this.handleSubmit}>
+                                    <div className='login-button'>
+
+                                        <button type='submit'>Sign in</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div className="log-in-bottom">
                                
-                        <form className='sign-up-continue-form' onSubmit={this.handleSubmit}>
-                                    <div className='sign-up-continue'>
-
-                                        <button  type='submit'>Continue</button>
-                                    </div>
-                            </form>
-                            </div>  
-                            <div className="sign-up-bottom">
-                                <p>By creating an account, you are agreeing to our Terms of Service and Privacy Policy.</p>
                                 <h3>Already have an account?</h3>
                                 <div className='redirect-to-login-signup'>
                                     <Link to='/login'>Sign In</Link>
