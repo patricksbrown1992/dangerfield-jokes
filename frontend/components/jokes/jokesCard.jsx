@@ -44,6 +44,7 @@ class JokesCard extends React.Component {
     }
 
     changeFrown(){
+  
         let like = {
             user_id: this.props.user.id,
             joke_id: this.state.id
@@ -83,7 +84,7 @@ class JokesCard extends React.Component {
             frown = ''
         }
 
-       
+    
         return (
             
             <div className='joke-card'>

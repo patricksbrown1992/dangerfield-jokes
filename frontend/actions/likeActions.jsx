@@ -54,7 +54,7 @@ export const createLike = (like) => dispatch => {
 };
 
 export const updateLike = (like) => dispatch => {
-   
+ 
     return APIUtil.updateLike(like).then(like => (dispatch(receiveLike(like))))
 };
 

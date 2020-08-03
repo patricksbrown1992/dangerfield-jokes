@@ -19,7 +19,7 @@ class JokesForm extends React.Component {
     }
 
     receiveJokes(jokes, likes){
-        let arr = []
+        // let arr = []
         let other_jokes = [
         
             {
@@ -61,21 +61,33 @@ class JokesForm extends React.Component {
         jokes.unshift(...other_jokes)
        
 
-        let i = 0
-        while (i < jokes.length){
-            let joke = jokes[i];
+        // let i = 0
+        // while (i < jokes.length){
+        //     let joke = jokes[i];
             
+            
+            
+        //         arr.push({joke_id: joke.id, setup: joke.setup, punchline: joke.punchline, frown: likes[joke.id].frown, smile: likes[joke.id].smile})
+        //     } else {
+        
+                
+
+        //     }
+        //     i++;
+        // }
+
+        let arr = jokes.map(joke => {
+       
             if(joke.id in likes){
             
-                arr.push({joke_id: joke.id, setup: joke.setup, punchline: joke.punchline, frown: likes[joke.id].frown, smile: likes[joke.id].smile})
-            } else {
-        
-                arr.push({joke_id: joke.id, setup: joke.setup, punchline: joke.punchline, frown: false, smile: false})
+                return <Card key = {joke.id} setup={joke.setup} joke_id={joke.id} punchline={joke.punchline} smile={likes[joke.id].smile} frown={likes[joke.id].frown}/>
 
+            }else {
+                return <Card key = {joke.id} setup={joke.setup} joke_id={joke.id} punchline={joke.punchline} smile={false} frown={false}/>
             }
-            i++;
-        }
-   
+        
+        });
+        
         // let all_jokes = this.state.jokes.concat(arr)
         this.setState({jokes: arr})
     }
@@ -105,12 +117,9 @@ class JokesForm extends React.Component {
 
         
   
-        let jokes = this.state.jokes.map(joke => {
         
-            return <Card key = {joke.id} setup={joke.setup} joke_id={joke.joke_id} punchline={joke.punchline} smile={joke.smile} frown={joke.frown}/>
-        });
-        let rodneys_jokes = jokes.slice(0,5);
-        let other_jokes = jokes.slice(5);
+        let rodneys_jokes = this.state.jokes.slice(0,5);
+        let other_jokes = this.state.jokes.slice(5);
        
        
         return (
