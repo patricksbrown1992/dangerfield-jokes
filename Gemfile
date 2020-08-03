@@ -14,7 +14,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 gem "rails_12factor"
-gem 'validates_email_format_of'
+
 gem 'autoprefixer-rails'
 
 
