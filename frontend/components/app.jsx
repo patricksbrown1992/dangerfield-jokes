@@ -15,7 +15,7 @@ const App = () => (
         <Switch>
  
             <ProtectedRoute path='/jokes' component={jokesIndex}/>
-            <Route exact path='/' component={SplashForm} />
+            <Authorized exact path='/' component={SplashForm} />
             <Authorized exact path='/login' component={LogInForm} />
             <Authorized exact path='/signup' component={SignUpForm} />
            

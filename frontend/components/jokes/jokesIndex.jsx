@@ -21,38 +21,37 @@ class JokesForm extends React.Component {
             {
                 setup: 'My wife and I were happy for twenty years.',
                 punchline: 'Then we met.',
-              
+        
                 id: 5000
             },
             {
                 setup: 'I asked my old man if I could go ice-skating on the lake.',
                 punchline: 'He told me, “Wait til it gets warmer.”',
-                
+             
                 id: 5001
 
             },
             {
                 setup: 'I could tell that my parents hated me.',
                 punchline: 'My bath toys were a toaster and a radio.',
-              
+         
                 id: 5002
             },
             {
                 setup: 'My psychiatrist told me I’m going crazy. I told him, “If you don’t mind, I’d like a second opinion.”',
                 punchline: 'He said, “All right. You’re ugly too!”',
-                
+            
                 id: 5003
             },
             {
                 setup: 'Last night my wife met me at the front door. She was wearing a sexy negligee.',
                 punchline: 'The only trouble was, she was coming home.',
-                
+      
                 id: 5004
             }, 
             {
                 setup: 'I was making love to this girl and she started crying. I said, “Are you going to hate yourself in the morning?”',
                 punchline: 'She said, “No, I hate myself now.”',
-                
                 id: 5005
             }, 
 
@@ -108,7 +107,7 @@ class JokesForm extends React.Component {
   
         let jokes = this.state.jokes.map(joke => {
         
-            return <Card setup={joke.setup} joke_id={joke.joke_id} punchline={joke.punchline} smile={joke.smile} frown={joke.frown}/>
+            return <Card key = {joke.id} setup={joke.setup} joke_id={joke.joke_id} punchline={joke.punchline} smile={joke.smile} frown={joke.frown}/>
         });
         let rodneys_jokes = jokes.slice(0,6);
         let other_jokes = jokes.slice(6);

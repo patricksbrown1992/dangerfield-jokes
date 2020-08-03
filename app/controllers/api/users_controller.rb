@@ -1,17 +1,6 @@
 class Api::UsersController < ApplicationController
 
-    def verify
-        @user = User.find_by(email: params[:email]);
     
-        if @user
-            
-            render json: {verified: true}, status: 200
-        else
-            
-            render json: ['There is no account for the email you entered.'], status: 422
-        end
-    end
-
     def create
     
         @user = User.new(user_params)
