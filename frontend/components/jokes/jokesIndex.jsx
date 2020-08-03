@@ -116,13 +116,30 @@ class JokesForm extends React.Component {
         return (
             
             <div className='joke-index'>
+                <div className = 'splash-header'>
+                    <div className = 'external-links-div'>
+                        <a href="https://patricksbrown1992.github.io/portfolio/" target="_blank">Portfolio</a>
+                        <a href="https://www.linkedin.com/in/patricksbrown1992/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/patricksbrown1992" target="_blank">Github</a>
+                        <h1>Dangerfield-ster</h1>
+                    </div>
+                    <div className = 'internal-links-div'>
+                        <button className='log-out-button'onClick={this.props.logout}>Log Out</button>
+                    </div>
+                    
+                </div>
                 
-                <button onClick={this.props.logout}>Log Out</button>
-                <h1>Rodney's Jokes</h1>
+                <img src={window.smile} alt="smiley"/>
+                <div className='joke-label-div'>
+                    <h1 className='joke-label'>Rodney's Jokes</h1>
+                </div>
+                
                 {rodneys_jokes}
                 <br/>
                 <br/>
-                <h1>Jokes from API</h1>
+                <div className='joke-label-div'>
+                    <h1 className='joke-label'>Jokes from API</h1>
+                </div>
                 {other_jokes}
 
 
