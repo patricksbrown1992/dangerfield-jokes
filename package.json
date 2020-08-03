@@ -43,9 +43,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "webpack",
-    "start": "webpack --watch --mode=development",
-    "build:css": "postcss src/app.css -o build/app.css",
-    "build": "npm run build:css"
+    "start": "webpack --watch --mode=development"
+  
   },
   "keywords": [],
   "author": "",
