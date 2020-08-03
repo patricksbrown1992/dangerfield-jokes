@@ -2,11 +2,11 @@
     display:flex;
     justify-content: center;
 
-    background-color: mintcream;
+    background-color: #64c6c6;
     z-index: 1;
     height: 100%;
     width: 100%;
-    background-size: 20% 20%;
+
 }
 
 
@@ -16,11 +16,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2%;
-    margin-bottom: 6%;
     width: 515px;
     background-color: white;
-    height: 630px;
+    margin-top: 25px;
+    height: 550px;
     z-index: 2;
 }
 
@@ -31,27 +30,27 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 26%;
-    margin-bottom: 10%;
-    padding-top: 8%;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    // margin-bottom: 10%;
+    // padding-top: 8%;
 }
-.log-in-top img {
-    margin-left: 26.5%;
-    
-}
+
 .log-in-top h1 {
-    margin-left: 6%;
-
-
+    margin-bottom: 15px;
 }
+
 .log-in-middle {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 75%;
-    height: 29%;
+    height: 200px;
+ 
 }
+
 .log-in-bottom {
     padding-top: 6%;
     margin-bottom: 38%;
@@ -87,19 +86,20 @@
     font-family: sans-serif;
  }
 
-  .log-in-form .enter-username button:hover {
+  .log-in-form .login-button button:hover {
     color: honeydew;
     cursor: pointer;
  
     outline: none;
   }
 
-.enter-username button {
+.login-button button {
 
     width: 350px;
     line-height: 475%;
     border-radius: 12px;
-    color: honeydew;
+    color: white;
+    background-color: #144d81;
     outline: none;
 }
 
@@ -127,16 +127,10 @@
  
     cursor: pointer;
  }
-.log-in-password-hide {
-    
-    height: 0;
-    opacity: 0;
-    transition: height 1s ease;
-}
 
-.log-in-password-show {
-    transition: height 1s, opacity 1s;
-    opacity: 100;
+
+.log-in-password {
+  
 
     margin-bottom: 6px;
     border-radius: 10px;
